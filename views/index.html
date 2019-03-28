@@ -1,10 +1,33 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <title>Coca Cola App</title>
-  </head>
+<head>
+	<meta charset="UTF-8">
+	<title>Socket IO Chat with Node!</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://unpkg.com/vue"></script> 
+</head>
+<body>
+	<main id="app">		
+		<section class="form-container">
+			<label for="nickname">Your Nickname (optional)</label>
+			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
+			
+			<form>
+				<label for="message">Something to say?</label>
+				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+				<input type="submit" @click.prevent="dispatchMessage">
+			</form>
+		</section>
+		
+		<section class="messages">
+			<ul id="messages" v-for="message in messages">
+				<!--render the message component here-->
+				<newmessage :msg="message"></newmessage>
+				
+			</ul>
+		</section>		
+	</main>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="module" src="js/main_vm.js"></script>
+</body>
+</html>

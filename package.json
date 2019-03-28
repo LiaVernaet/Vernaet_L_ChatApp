@@ -1,0 +1,20 @@
+{
+  "name": "vanrys_t_chatapp_grb",
+  "version": "1.0.0",
+  "description": "social media app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trevor-FanshaweC/VanRys_T_ChatApp_GrB.git"
+  },
+  "author": "TVR",
+  "license": "ISC",
+  "homepage": "https://github.com/Trevor-FanshaweC/VanRys_T_ChatApp_GrB#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
