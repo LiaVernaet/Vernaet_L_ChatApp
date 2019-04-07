@@ -3,6 +3,13 @@
 	margin: 0; padding: 0; box-sizing: border-box;
 }
 
+
+h2 {
+	font-family: 'Questrial', sans-serif;
+	font-size: 20px;
+	color: #c35bff;
+}
+
 html, body { height: 100%; }
 
 body { font: 16px Helvetica, Arial; }
@@ -15,8 +22,8 @@ main {
 .form-container, .messages { padding: 20px; }
 .form-container { 
 	flex: 1; 
-	border: 6px solid #bfcfd6;
-	background-color: #e3edf1;
+	border: 6px solid #fff9c8;
+	background-color: #aaebff;
 	position: fixed;
 	width: 100%;
 
@@ -25,16 +32,15 @@ main {
 
 .messages { 
 	flex: 2;
-	background-color: #eee;
-	border: 6px solid #e2e0e0; 
+	background-color: rgb(193, 255, 213);
+	border: 6px solid #fff9c8;
 	overflow: scroll;
-	width: 20%;
 }
 
 input, textarea { 
 	display: block; 
 	width: 100%;
-	border: 2px solid #bfcfd6;
+	border: 2px solid #fff9c8;
 	//border-color: #bfcfd6; 
 	border-radius: 4px; 
 	font-size: 0.8rem; 
@@ -54,7 +60,7 @@ form {
 	input[type=submit] { 
 		width: auto; 
 		padding: 10px; 
-		background-color: rgb(75, 200, 17);
+		background-color: #c35bff;
 		margin-top: 1rem; 
 		border-radius: 8px;
 		color: white;
