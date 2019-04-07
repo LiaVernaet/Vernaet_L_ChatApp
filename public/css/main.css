@@ -2,10 +2,20 @@
 
 h2 {
 	font-family: 'Questrial', sans-serif;
-	font-size: 20px;
-	color: #c35bff;
+	font-size: 30px;
+    color: #c35bff;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
+p {
+    padding-bottom: 20px;
+}
+
+label {
+    color: #c35bff;
+    font-size: 20px;
+}
 
 html,body{
     height:100%

@@ -21,11 +21,11 @@
 		<section class="form-container">
 			<h2>Welcome to Lia's Chat App</h2>
 			<p>Welcome to my chat app. Enter your name below to start socializing. Have fun!</p>
-			<label for="nickname">Your Nickname (optional)</label>
+			<label for="nickname">Username (optional)</label>
 			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
 			
 			<form>
-				<label for="message">Something to say?</label>
+				<label for="message">Message</label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
 				<input type="submit" @click.prevent="dispatchMessage">
 			</form>
