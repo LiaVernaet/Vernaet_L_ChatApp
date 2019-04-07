@@ -8,16 +8,6 @@
 </head>
 <body>
 	<main id="app">		
-		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
-			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
-			
-			<form>
-				<label for="message">Something to say??</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
-				<input type="submit" @click.prevent="dispatchMessage">
-			</form>
-		</section>
 		
 		<section class="messages">
 			<ul id="messages" v-for="message in messages">
@@ -26,6 +16,17 @@
 				
 			</ul>
 		</section>		
+
+		<section class="form-container">
+			<label for="nickname">Your Nickname (optional)</label>
+			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
+			
+			<form>
+				<label for="message">Something to say?</label>
+				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+				<input type="submit" @click.prevent="dispatchMessage">
+			</form>
+		</section>
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>
