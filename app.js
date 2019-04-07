@@ -43,29 +43,3 @@ io.on('connection', function(socket){
         console.log('a user has connected');
     });
 });
-
-$(document).ready(function(e) {
-
-      $('#text-custom-trigger').emojiPicker({
-        width: '300px',
-        height: '200px',
-        button: false
-      });
-      
-      $('#input-default').emojiPicker();
-
-      $('#input-custom-size').emojiPicker({
-        width: '300px',
-        height: '200px'
-      });
-
-      $('#input-left-position').emojiPicker({
-        position: 'left'
-      });
-
-      $('#trigger').click(function(e) {
-        e.preventDefault();
-        $('#text-custom-trigger').emojiPicker('toggle');
-      });
-
-    });
