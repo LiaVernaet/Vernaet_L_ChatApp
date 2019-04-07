@@ -35,7 +35,7 @@ io.on('connection', function(socket){
         console.log('message', msg, 'socket', socket.id);
 
         //send a message to every connected client
-        io.emit('chat message', { id: `${socket.id}`, message: msg, image: image});
+        io.emit('chat message', { id: `${socket.id}`, message: msg});
     })
 
 
