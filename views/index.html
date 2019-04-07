@@ -5,6 +5,7 @@
 	<title>Socket IO Chat with Node!</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<script src="node_modules/chat-engine-emoji/dist/chat-engine-emoji.js"></script>
 	<script src="https://unpkg.com/vue"></script> 
 </head>
 <body>
@@ -27,6 +28,11 @@
 			<form>
 				<label for="message">Message</label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+
+				<label for="image">Send Image:</label>
+		<input type="file" name="image" id="imagr" value="">
+
+		
 				<input type="submit" @click.prevent="dispatchMessage">
 			</form>
 		</section>
