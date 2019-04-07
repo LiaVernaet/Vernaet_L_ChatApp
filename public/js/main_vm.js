@@ -19,13 +19,14 @@ const vm = new Vue({
         socketID: "",
         nickname: "",
         message: "",
+        image: "",
         messages: []
     },
 
     methods: {
         dispatchMessage(){
             //send a chat message
-            socket.emit('chat message', { content: this.message, name: this.nickname || "Anonymous"} );
+            socket.emit('chat message', { content: this.message, image: this.image, name: this.nickname || "Anonymous"} );
 
             this.message="";
 
