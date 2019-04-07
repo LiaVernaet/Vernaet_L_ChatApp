@@ -17,9 +17,12 @@ main {
 	flex: 1; 
 	border: 6px solid #bfcfd6;
 	background-color: #e3edf1;
-	position: fixed;
 
 	label { display: block; margin-bottom: 0.5rem; }
+}
+
+.form-container{
+	position: fixed;
 }
 
 .messages { 
