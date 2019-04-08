@@ -1,4 +1,5 @@
 import ChatMessage from './modules/ChatMessage.js'
+import UserNickname from './modules/UserNickname.js'
 
 
 const socket = io();
@@ -35,14 +36,24 @@ const vm = new Vue({
 
             this.message="";
 
+        },
+
+        dispatchUser(){
+            
+            socket.emit('user nickname', { content: this.nickname || "Anonymous"} );
+
         }
     },
 
     components: {
-        newmessage: ChatMessage
+        newmessage: ChatMessage,
+        newuser: UserNickname
     }
 }).$mount("#app");
 
 socket.addEventListener('connected', setUserId);
 socket.addEventListener('chat message', appendMessage);
 socket.addEventListener('disconnect', appendMessage);
+
+socket.addEventListener('user nickname', appendUser);
+socket.addEventListener('disconnect', appendUser);

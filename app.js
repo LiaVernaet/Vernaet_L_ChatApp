@@ -38,6 +38,14 @@ io.on('connection', function(socket){
         io.emit('chat message', { id: `${socket.id}`, message: msg});
     })
 
+    socket.on('user nickname', function(usr) {
+        //check the message contents
+        console.log('nickname', usr, 'socket', socket.id);
+
+        //send a message to every connected client
+        io.emit('user nickname', { id: `${socket.id}`, nickname: usr});
+    })
+
 
     socket.on('disconnect', function() {
         console.log('a user has disconnected');
