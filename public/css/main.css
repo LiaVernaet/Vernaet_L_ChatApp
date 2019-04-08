@@ -90,14 +90,12 @@ form input[type=submit]{
     /* margin:0; */
     /* padding:0; */
     /* padding-left: 100px; */
-    width: 1000px;
-    margin-left: 500px;
-    background-color: red;
+    width: 800px;
+    margin-left: 900px;
 }
 
 #messages li{
     padding:5px 10px;
-    background-color: pink;
 
 }
 
