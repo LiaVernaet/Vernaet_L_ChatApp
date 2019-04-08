@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
 	<script src="node_modules/chat-engine-emoji/dist/chat-engine-emoji.js"></script>
+	<!-- <script src="https://gist.github.com/companje/b95e735650f1cd2e2a41.js"></script> -->
+	
 	<script src="https://unpkg.com/vue"></script> 
 </head>
 <body>
@@ -30,7 +32,8 @@
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
 
 				<label for="image">Send Images:</label>
-		<input v-model="image" type="file" id="image">
+				<input type="file" id="fileUploader" />
+		<!-- <input v-model="image" type="file" id="img"> -->
 
 
 				<input type="submit" @click.prevent="dispatchMessage">
