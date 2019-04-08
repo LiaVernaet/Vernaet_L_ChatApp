@@ -35,6 +35,15 @@
 
 				<input type="submit" @click.prevent="dispatchMessage">
 			</form>
+
+
+			<section class="users">
+				<ul id="users" v-for="nickname in data">
+					<!--render the message component here-->
+					<!-- <newmessage :msg="message"></newmessage> -->
+					
+				</ul>
+			</section>	
 		</section>
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
