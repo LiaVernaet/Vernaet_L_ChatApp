@@ -14,13 +14,18 @@ function appendMessage(message) {
     vm.messages.push(message);
 }
 
+function appendUser(nickname) {
+    vm.users.push(nickname);
+}
+
 const vm = new Vue({
     data: {
         socketID: "",
         nickname: "",
         message: "",
         image: "",
-        messages: []
+        messages: [],
+        users: []
     },
 
     methods: {

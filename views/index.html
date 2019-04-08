@@ -38,12 +38,13 @@
 
 
 			<section class="users">
-				<ul id="users" v-for="nickname in data">
+				<ul id="users" v-for="nickname in users">
 					<!--render the message component here-->
-					<!-- <newmessage :msg="message"></newmessage> -->
+					<!-- <newmessage :msg="nickname"></newmessage> -->
 					
 				</ul>
-			</section>	
+			</section>		
+
 		</section>
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
