@@ -50,5 +50,17 @@ io.on('connection', function(socket){
     socket.on('disconnect', function() {
         console.log('a user has disconnected');
     });
-    
+     });
+
+    //track and listen for online user count
+    var userCount = 0;
+
+    io.sockets.on('connection', function (socket) {
+      userCount++;
+      io.sockets.emit('userCount', { userCount: userCount });
+      socket.on('disconnect', function() {
+        userCount--;
+        io.sockets.emit('userCount', { userCount: userCount });
+      });
+   
 });
