@@ -3,8 +3,8 @@ const express = require('express');
 const app = express();
 const io = require('socket.io')();
 
-var userCount = 0;
-console.log(userCount);
+// var userCount = 0;
+// console.log(userCount);
 
 // some config stuff
 const port = process.env.PORT || 3000;
@@ -29,7 +29,7 @@ io.attach(server);
 io.on('connection', function(socket){
     console.log('a user has connected', socket);
     socket.emit('connected', {sID:`${socket.id}`, message: 'new connection'} );
-    userCount++;
+    // userCount++;
 
 
     ///listen for incoming messages and send them to everyone
@@ -53,7 +53,7 @@ io.on('connection', function(socket){
 
     socket.on('disconnect', function() {
         console.log('a user has disconnected');
-        userCount--;
+        // userCount--;
     });
     
 
