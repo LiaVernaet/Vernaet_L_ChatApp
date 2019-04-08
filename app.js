@@ -5,13 +5,6 @@ const io = require('socket.io')();
 
 // var userCount = 0;
 
-var app = new Vue({
-    el: '#users',
-    data: {
-      userCount: 0
-    }
-  })
-
 // some config stuff
 const port = process.env.PORT || 3000;
 

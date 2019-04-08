@@ -1,12 +1,6 @@
 import ChatMessage from './modules/ChatMessage.js'
 import UserNickname from './modules/UserNickname.js'
 
-// var app = new Vue({
-//     el: '#users',
-//     data: {
-//       userCount: 0
-//     }
-//   })
 
 const socket = io();
 
