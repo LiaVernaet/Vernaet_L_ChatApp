@@ -52,21 +52,21 @@ const vm = new Vue({
 }).$mount("#app");
 
 
-function b64(e){var t="";var n=new Uint8Array(e);var r=n.byteLength;for(var i=0;i<r;i++){t+=String.fromCharCode(n[i])}return window.btoa(t)}
+// function b64(e){var t="";var n=new Uint8Array(e);var r=n.byteLength;for(var i=0;i<r;i++){t+=String.fromCharCode(n[i])}return window.btoa(t)}
 
-$(document).ready(function() {
+// $(document).ready(function() {
   
-  var socket = io();
+//   var socket = io();
 
-  socket.on('imageConversionByClient', function(data) {
-    $("#img").attr("src","data:image/png;base64,"+b64(data.buffer));
-  });
+//   socket.on('imageConversionByClient', function(data) {
+//     $("#img").attr("src","data:image/png;base64,"+b64(data.buffer));
+//   });
 
-  socket.on('imageConversionByServer', function(data) {
-    $("#img2").attr("src",data);
-  });
+//   socket.on('imageConversionByServer', function(data) {
+//     $("#img2").attr("src",data);
+//   });
 
-});
+// });
 
 
 socket.addEventListener('connected', setUserId);
