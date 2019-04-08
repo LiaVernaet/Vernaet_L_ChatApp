@@ -4,6 +4,7 @@ const app = express();
 const io = require('socket.io')();
 
 var userCount = 0;
+console.log(userCount);
 
 // some config stuff
 const port = process.env.PORT || 3000;
