@@ -91,7 +91,7 @@ form input[type=submit]{
     /* padding:0; */
     /* padding-left: 100px; */
     width: 1000px;
-    margin-left: 900px;
+    margin-left: 1200px;
 }
 
 #messages li{
@@ -104,7 +104,7 @@ form input[type=submit]{
 }
 
 .new-message{
-    width:25%;
+    width:45%;
     padding:8px 12px;
     background-color:white;
     border-radius:8px;
