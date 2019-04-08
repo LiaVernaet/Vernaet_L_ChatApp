@@ -58,8 +58,8 @@ socket.addEventListener('disconnect', appendMessage);
 socket.addEventListener('user nickname', appendUser);
 socket.addEventListener('disconnect', appendUser);
 
-var socket = io.connect();
+// var socket = io.connect();
 
-socket.on('userCount', function (data) {
-  console.log(data.userCount);
-});
+// socket.on('userCount', function (data) {
+//   console.log(data.userCount);
+// });
