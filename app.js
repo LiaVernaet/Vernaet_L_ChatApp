@@ -4,7 +4,7 @@ const app = express();
 const io = require('socket.io')();
 var http = require('http').Server(app);
 var fs = require('fs');
-// var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById('canvas').getContext('2d');
 // var socket = io.connect();
 // var uploader = new SocketIOFileUpload(socket);
 
@@ -15,12 +15,12 @@ var fs = require('fs');
 
 // app.use(express.static(__dirname, '/'));
 
-io.on('connection', function(socket){
-  fs.readFile('image.png', function(err, data){
-    socket.emit('imageConversionByClient', { image: true, buffer: data });
-    socket.emit('imageConversionByServer', "data:image/png;base64,"+ data.toString("base64"));
-  });
-});
+// io.on('connection', function(socket){
+//   fs.readFile('image.png', function(err, data){
+//     socket.emit('imageConversionByClient', { image: true, buffer: data });
+//     socket.emit('imageConversionByServer', "data:image/png;base64,"+ data.toString("base64"));
+//   });
+// });
 
 // some config stuff
 const port = process.env.PORT || 3000;
@@ -73,13 +73,13 @@ io.on('connection', function(socket){
         io.emit('user nickname', { id: `${socket.id}`, nickname: usr});
     })
 
-    // socket.on("image", function(info) {
-    //     if (info.image) {
-    //       var img = new Image();
-    //       img.src = 'data:image/jpeg;base64,' + info.buffer;
-    //       ctx.drawImage(img, 0, 0);
-    //     }
-    //   });
+    socket.on("image", function(info) {
+        if (info.image) {
+          var img = new Image();
+          img.src = 'data:image/jpeg;base64,' + info.buffer;
+          ctx.drawImage(img, 0, 0);
+        }
+      });
 
 
     socket.on('disconnect', function() {
