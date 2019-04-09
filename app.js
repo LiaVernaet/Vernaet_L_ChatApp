@@ -73,13 +73,13 @@ io.on('connection', function(socket){
         io.emit('user nickname', { id: `${socket.id}`, nickname: usr});
     })
 
-    socket.on("image", function(info) {
-        if (info.image) {
-          var img = new Image();
-          img.src = 'data:image/jpeg;base64,' + info.buffer;
-          ctx.drawImage(img, 0, 0);
-        }
-      });
+    // socket.on("image", function(info) {
+    //     if (info.image) {
+    //       var img = new Image();
+    //       img.src = 'data:image/jpeg;base64,' + info.buffer;
+    //       ctx.drawImage(img, 0, 0);
+    //     }
+    //   });
 
 
     socket.on('disconnect', function() {
