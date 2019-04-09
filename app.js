@@ -4,7 +4,6 @@ const app = express();
 const io = require('socket.io')();
 var http = require('http').Server(app);
 var fs = require('fs');
-var ctx = document.getElementById('canvas').getContext('2d');
 // var socket = io.connect();
 // var uploader = new SocketIOFileUpload(socket);
 
@@ -65,7 +64,6 @@ io.on('connection', function(socket){
         //send a message to every connected client
         io.emit('user nickname', { id: `${socket.id}`, nickname: usr});
     })
-    
 
     // socket.on('user image', function(img) {
     //     //check the message contents
