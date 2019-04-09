@@ -65,13 +65,13 @@ io.on('connection', function(socket){
         io.emit('user nickname', { id: `${socket.id}`, nickname: usr});
     })
 
-    socket.on('user image', function(img) {
-        //check the message contents
-        console.log('image', img, 'socket', socket.id);
+    // socket.on('user image', function(img) {
+    //     //check the message contents
+    //     console.log('image', img, 'socket', socket.id);
 
-        //send a message to every connected client
-        io.emit('user image', { id: `${socket.id}`, image: img});
-    })
+    //     //send a message to every connected client
+    //     io.emit('user image', { id: `${socket.id}`, image: img});
+    // })
 
 
     socket.on('disconnect', function() {
