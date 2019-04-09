@@ -31,7 +31,7 @@
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
 
 				<label for="image">Attach Image:</label>
-		        <input v-model="image" type="file" id="image">
+		        <input v-on="image" type="file" id="image">
 
 
 				<input type="submit" @click.prevent="dispatchMessage">
@@ -40,7 +40,7 @@
 
 			<section id="users">
 				<h2>Online Users</h2>
-				<ul id="onlineUsers" v-for="nickname in users"></ul>
+				<ul id="onlineUsers" v-for="users"></ul>
 				<!-- <ul id="users" v-for="nickname in users">
 					<newmessage :usr="nickname"></newmessage>
 				</ul> -->
