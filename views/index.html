@@ -5,7 +5,7 @@
 	<title>Socket IO Chat with Node!</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-	<!-- <script src="https://gist.github.com/companje/b95e735650f1cd2e2a41.js"></script> -->
+	<!--https://www.npmjs.com/package/socketio-file-upload-->
 	
 	<script src="https://unpkg.com/vue"></script> 
 </head>
@@ -30,9 +30,8 @@
 				<label for="message">Message</label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
 
-				<label for="image">Send Images:</label>
-				<input type="file" id="fileUploader" />
-		<!-- <input v-model="image" type="file" id="img"> -->
+				<label for="image">Attach Image:</label>
+		        <input v-model="image" type="file" id="image">
 
 
 				<input type="submit" @click.prevent="dispatchMessage">
