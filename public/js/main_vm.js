@@ -19,9 +19,9 @@ function appendUser(nickname) {
     vm.users.push(nickname);
 }
 
-function appendImage(image) {
-    vm.images.push(image);
-}
+// function appendImage(image) {
+//     vm.images.push(image);
+// }
 
 const vm = new Vue({
     data: {
@@ -46,18 +46,19 @@ const vm = new Vue({
             
             socket.emit('user nickname', { content: this.nickname || "Anonymous"} );
 
-        },
-        dispatchImage(){
+         }
+        //  ,
+        // dispatchImage(){
             
-            socket.emit('user image', { content: this.image, name: this.nickname || "Anonymous"} );
+        //     socket.emit('user image', { content: this.image, name: this.nickname || "Anonymous"} );
 
-        }
+        // }
     },
 
     components: {
         newmessage: ChatMessage,
         newuser: UserNickname,
-        newimage: UserImage
+        // newimage: UserImage
     }
 }).$mount("#app");
 
@@ -83,8 +84,8 @@ socket.addEventListener('connected', setUserId);
 socket.addEventListener('chat message', appendMessage);
 socket.addEventListener('disconnect', appendMessage);
 
-socket.addEventListener('user image', appendImage);
-socket.addEventListener('disconnect', appendImage);
+// socket.addEventListener('user image', appendImage);
+// socket.addEventListener('disconnect', appendImage);
 
 socket.addEventListener('user nickname', appendUser);
 socket.addEventListener('disconnect', appendUser);
