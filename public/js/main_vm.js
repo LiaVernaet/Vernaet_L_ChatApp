@@ -47,13 +47,12 @@ const vm = new Vue({
             
             socket.emit('user nickname', { content: this.nickname || "Anonymous"} );
 
-         }
-        //  ,
-        // dispatchImage(){
+          }  ,
+         dispatchImage(){
             
-        //     socket.emit('user image', { content: this.image, name: this.nickname || "Anonymous"} );
+             socket.emit('image', { image: true, buffer: buf.toString('base64') });
 
-        // }
+         }
     },
 
     components: {

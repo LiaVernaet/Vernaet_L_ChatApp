@@ -4,6 +4,7 @@ const app = express();
 const io = require('socket.io')();
 var http = require('http').Server(app);
 var fs = require('fs');
+var ctx = document.getElementById('canvas').getContext('2d');
 // var socket = io.connect();
 // var uploader = new SocketIOFileUpload(socket);
 
@@ -46,7 +47,14 @@ io.on('connection', function(socket){
     socket.emit('connected', {sID:`${socket.id}`, message: 'new connection'} );
     // userCount++;
 
-
+    io.on('connection', function(socket){
+        fs.readFile(__dirname + '/images/image.jpg', function(err, buf){
+          // it's possible to embed binary data
+          // within arbitrarily-complex objects
+          socket.emit('image', { image: true, buffer: buf });
+          console.log('image file is initialized');
+        });
+      });
     ///listen for incoming messages and send them to everyone
 
     socket.on('chat message', function(msg) {
@@ -65,13 +73,13 @@ io.on('connection', function(socket){
         io.emit('user nickname', { id: `${socket.id}`, nickname: usr});
     })
 
-    // socket.on('user image', function(img) {
-    //     //check the message contents
-    //     console.log('image', img, 'socket', socket.id);
-
-    //     //send a message to every connected client
-    //     io.emit('user image', { id: `${socket.id}`, image: img});
-    // })
+    socket.on("image", function(info) {
+        if (info.image) {
+          var img = new Image();
+          img.src = 'data:image/jpeg;base64,' + info.buffer;
+          ctx.drawImage(img, 0, 0);
+        }
+      });
 
 
     socket.on('disconnect', function() {
