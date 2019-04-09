@@ -48,12 +48,12 @@ io.on('connection', function(socket){
     // userCount++;
 
     // io.on('connection', function(socket){
-        fs.readFile(__dirname + '/images/image.jpg', function(err, buf){
-          // it's possible to embed binary data
-          // within arbitrarily-complex objects
-          socket.emit('image', { image: true, buffer: buf });
-          console.log('image file is initialized');
-        });
+    //     fs.readFile(__dirname + '/images/image.jpg', function(err, buf){
+    //       // it's possible to embed binary data
+    //       // within arbitrarily-complex objects
+    //       socket.emit('image', { image: true, buffer: buf });
+    //       console.log('image file is initialized');
+    //     });
     //   });
     ///listen for incoming messages and send them to everyone
 
