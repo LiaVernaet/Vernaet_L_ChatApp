@@ -41,6 +41,7 @@
 			<section id="users">
 				<h2>Online Users</h2>
 				<ul id="onlineUsers" v-for="user in users"></ul>
+				<newmessage :msg="user"></newmessage>
 				<!-- <ul id="users" v-for="nickname in users">
 					<newmessage :usr="nickname"></newmessage>
 				</ul> -->
