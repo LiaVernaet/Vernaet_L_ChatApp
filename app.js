@@ -5,7 +5,7 @@ const io = require('socket.io')();
 var http = require('http').Server(app);
 var fs = require('fs');
 var clients = io.sockets.clients();
-console.log(clients);
+console.log("connected be the".clients);
 // var socket = io.connect();
 // var uploader = new SocketIOFileUpload(socket);
 
