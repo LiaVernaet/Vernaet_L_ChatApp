@@ -17,6 +17,7 @@ function appendMessage(message) {
 
 function appendUser(nickname) {
     vm.users.push(nickname);
+    console.log(users);
 }
 
 // function appendImage(image) {
