@@ -4,7 +4,7 @@ const app = express();
 const io = require('socket.io')();
 var http = require('http').Server(app);
 var fs = require('fs');
-// var clients = io.sockets.clients();
+var clients = io.sockets.clients();
 var socket = io.connect();
 var uploader = new SocketIOFileUpload(socket);
 
@@ -73,15 +73,6 @@ io.on('connection', function(socket){
         //send a message to every connected client
         io.emit('user nickname', { id: `${socket.id}`, nickname: usr});
     })
-
-    // socket.on('user image', function(img) {
-    //     //check the message contents
-    //     console.log('image', img, 'socket', socket.id);
-
-    //     //send a message to every connected client
-    //     io.emit('user image', { id: `${socket.id}`, image: img});
-    // })
-
 
     socket.on('disconnect', function() {
         console.log('a user has disconnected');

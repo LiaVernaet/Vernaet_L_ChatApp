@@ -4,13 +4,13 @@ import UserNickname from './modules/UserNickname.js'
 
 const socket = io();
 
-// socket.set('nickname', 'Guest');
+socket.set('nickname', 'Guest');
 
-// for (var socketId in io.sockets.sockets) {
-//     io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
-//         console.log(nickname);
-//     });
-// }
+for (var socketId in io.sockets.sockets) {
+    io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
+        console.log(nickname);
+    });
+}
 
 
 function setUserId({sID, message}) {
@@ -28,11 +28,6 @@ function appendUser(nickname) {
     vm.users.push(nickname);
     console.log(users);
 }
-
-// function appendImage(image) {
-//     vm.images.push(image);
-// }
-
 const vm = new Vue({
     data: {
         socketID: "",
@@ -70,23 +65,6 @@ const vm = new Vue({
         // newimage: UserImage
     }
 }).$mount("#app");
-
-
-// function b64(e){var t="";var n=new Uint8Array(e);var r=n.byteLength;for(var i=0;i<r;i++){t+=String.fromCharCode(n[i])}return window.btoa(t)}
-
-// $(document).ready(function() {
-  
-//   var socket = io();
-
-//   socket.on('imageConversionByClient', function(data) {
-//     $("#img").attr("src","data:image/png;base64,"+b64(data.buffer));
-//   });
-
-//   socket.on('imageConversionByServer', function(data) {
-//     $("#img2").attr("src",data);
-//   });
-
-// });
 
 
 socket.addEventListener('connected', setUserId);
