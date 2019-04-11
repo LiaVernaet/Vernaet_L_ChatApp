@@ -9,19 +9,19 @@ console.log("connected be the".clients);
 var socket = io.connect();
 var uploader = new SocketIOFileUpload(socket);
 
-uploader.listenOnInput(document.getElementById("fileUploader"));
+// uploader.listenOnInput(document.getElementById("fileUploader"));
 
 var userCount = 0;
 console.log(userCount);
 
-app.use(express.static(__dirname, '/'));
+// app.use(express.static(__dirname, '/'));
 
-io.on('connection', function(socket){
-  fs.readFile('image.png', function(err, data){
-    socket.emit('imageConversionByClient', { image: true, buffer: data });
-    socket.emit('imageConversionByServer', "data:image/png;base64,"+ data.toString("base64"));
-  });
-});
+// io.on('connection', function(socket){
+//   fs.readFile('image.png', function(err, data){
+//     socket.emit('imageConversionByClient', { image: true, buffer: data });
+//     socket.emit('imageConversionByServer', "data:image/png;base64,"+ data.toString("base64"));
+//   });
+// });
 
 // some config stuff
 const port = process.env.PORT || 3000;
@@ -43,7 +43,7 @@ const server = app.listen(port, () => {
 //plug in the chat app package
  io.attach(server);
 
-socket.set('nickname', 'Guest');
+// socket.set('nickname', 'Guest');
 
 // for (var socketId in io.sockets.sockets) {
 //     io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
