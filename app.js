@@ -4,24 +4,24 @@ const app = express();
 const io = require('socket.io')();
 var http = require('http').Server(app);
 var fs = require('fs');
-// var clients = io.sockets.clients();
-// console.log("connected be the".clients);
+var clients = io.sockets.clients();
+console.log("connected be the".clients);
 var socket = io.connect();
-// var uploader = new SocketIOFileUpload(socket);
+var uploader = new SocketIOFileUpload(socket);
 
-// uploader.listenOnInput(document.getElementById("fileUploader"));
+uploader.listenOnInput(document.getElementById("fileUploader"));
 
-// var userCount = 0;
-// console.log(userCount);
+var userCount = 0;
+console.log(userCount);
 
-// app.use(express.static(__dirname, '/'));
+app.use(express.static(__dirname, '/'));
 
-// io.on('connection', function(socket){
-//   fs.readFile('image.png', function(err, data){
-//     socket.emit('imageConversionByClient', { image: true, buffer: data });
-//     socket.emit('imageConversionByServer', "data:image/png;base64,"+ data.toString("base64"));
-//   });
-// });
+io.on('connection', function(socket){
+  fs.readFile('image.png', function(err, data){
+    socket.emit('imageConversionByClient', { image: true, buffer: data });
+    socket.emit('imageConversionByServer', "data:image/png;base64,"+ data.toString("base64"));
+  });
+});
 
 // some config stuff
 const port = process.env.PORT || 3000;
