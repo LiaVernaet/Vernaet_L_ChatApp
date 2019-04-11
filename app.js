@@ -6,15 +6,15 @@ var http = require('http').Server(app);
 var fs = require('fs');
 var clients = io.sockets.clients();
 console.log("connected be the".clients);
-// var socket = io.connect();
-// var uploader = new SocketIOFileUpload(socket);
+var socket = io.connect();
+var uploader = new SocketIOFileUpload(socket);
 
-// uploader.listenOnInput(document.getElementById("fileUploader"));
+uploader.listenOnInput(document.getElementById("fileUploader"));
 
-// var userCount = 0;
-// console.log(userCount);
+var userCount = 0;
+console.log(userCount);
 
-// app.use(express.static(__dirname, '/'));
+app.use(express.static(__dirname, '/'));
 
 // io.on('connection', function(socket){
 //   fs.readFile('image.png', function(err, data){
@@ -41,15 +41,15 @@ const server = app.listen(port, () => {
 
 // socket.io chat app stuff to follow
 //plug in the chat app package
-// io.attach(server);
+ io.attach(server);
 
-// socket.set('nickname', 'Guest');
+socket.set('nickname', 'Guest');
 
-// for (var socketId in io.sockets.sockets) {
-//     io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
-//         console.log(nickname);
-//     });
-// }
+for (var socketId in io.sockets.sockets) {
+    io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
+        console.log(nickname);
+    });
+}
 
 io.on('connection', function(socket){
     console.log('a user has connected', socket);
