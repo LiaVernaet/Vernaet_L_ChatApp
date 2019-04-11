@@ -41,7 +41,7 @@ const server = app.listen(port, () => {
 
 // socket.io chat app stuff to follow
 //plug in the chat app package
-io.attach(server);
+// io.attach(server);
 
 // socket.set('nickname', 'Guest');
 
