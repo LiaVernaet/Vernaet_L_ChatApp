@@ -4,17 +4,17 @@ const app = express();
 const io = require('socket.io')();
 var http = require('http').Server(app);
 var fs = require('fs');
-var clients = io.sockets.clients();
-console.log("connected be the".clients);
+// var clients = io.sockets.clients();
+// console.log("connected be the".clients);
 var socket = io.connect();
-var uploader = new SocketIOFileUpload(socket);
+// var uploader = new SocketIOFileUpload(socket);
 
 // uploader.listenOnInput(document.getElementById("fileUploader"));
 
 // var userCount = 0;
 // console.log(userCount);
 
-app.use(express.static(__dirname, '/'));
+// app.use(express.static(__dirname, '/'));
 
 // io.on('connection', function(socket){
 //   fs.readFile('image.png', function(err, data){
