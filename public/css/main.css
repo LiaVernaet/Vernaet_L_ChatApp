@@ -85,7 +85,7 @@ form input[type=submit]{
     font-weight:bold
 }
 
-/* form input[type=submit]:hover {
+form input[type=submit]:hover {
     animation-name: buttonAnimate;
     animation-duration: .6s; }
 
@@ -99,7 +99,7 @@ form input[type=submit]{
           transform: scale(1.1); 
           background-color: #dca0ff;
         
-        } } */
+        } }
 
 #messages{
     list-style-type:none;
