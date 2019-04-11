@@ -2,7 +2,7 @@ import ChatMessage from './modules/ChatMessage.js'
 import UserNickname from './modules/UserNickname.js'
 
 
-// const socket = io();
+const socket = io();
 
 // socket.set('nickname', 'Guest');
 
