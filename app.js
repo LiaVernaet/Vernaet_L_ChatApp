@@ -7,12 +7,12 @@ var fs = require('fs');
 var clients = io.sockets.clients();
 console.log("connected be the".clients);
 var socket = io.connect();
-var uploader = new SocketIOFileUpload(socket);
+// var uploader = new SocketIOFileUpload(socket);
 
 // uploader.listenOnInput(document.getElementById("fileUploader"));
 
-var userCount = 0;
-console.log(userCount);
+// var userCount = 0;
+// console.log(userCount);
 
 // app.use(express.static(__dirname, '/'));
 
