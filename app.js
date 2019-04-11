@@ -15,12 +15,12 @@ uploader.listenOnInput(document.getElementById("fileUploader"));
 
 // app.use(express.static(__dirname, '/'));
 
-io.on('connection', function(socket){
-  fs.readFile('image.png', function(err, data){
-    socket.emit('imageConversionByClient', { image: true, buffer: data });
-    socket.emit('imageConversionByServer', "data:image/png;base64,"+ data.toString("base64"));
-  });
-});
+// io.on('connection', function(socket){
+//   fs.readFile('image.png', function(err, data){
+//     socket.emit('imageConversionByClient', { image: true, buffer: data });
+//     socket.emit('imageConversionByServer', "data:image/png;base64,"+ data.toString("base64"));
+//   });
+// });
 
 // some config stuff
 const port = process.env.PORT || 3000;
