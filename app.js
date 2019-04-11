@@ -43,13 +43,13 @@ const server = app.listen(port, () => {
 //plug in the chat app package
 io.attach(server);
 
-socket.set('nickname', 'Guest');
+// socket.set('nickname', 'Guest');
 
-for (var socketId in io.sockets.sockets) {
-    io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
-        console.log(nickname);
-    });
-}
+// for (var socketId in io.sockets.sockets) {
+//     io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
+//         console.log(nickname);
+//     });
+// }
 
 io.on('connection', function(socket){
     console.log('a user has connected', socket);
