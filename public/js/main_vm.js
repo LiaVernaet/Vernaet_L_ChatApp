@@ -2,8 +2,9 @@ import ChatMessage from './modules/ChatMessage.js'
 import UserNickname from './modules/UserNickname.js'
 
 
-const socket = io();
+// const socket = io();
 
+//removing bottom lines crashes program
 socket.set('nickname', 'Guest');
 
 for (var socketId in io.sockets.sockets) {
@@ -11,7 +12,7 @@ for (var socketId in io.sockets.sockets) {
         console.log(nickname);
     });
 }
-
+//
 
 function setUserId({sID, message}) {
     // debugger;
