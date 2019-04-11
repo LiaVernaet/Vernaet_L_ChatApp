@@ -51,9 +51,9 @@ for (var socketId in io.sockets.sockets) {
     });
 }
 
-io.on('connection', function(socket){
-    console.log('a user has connected', socket);
-    socket.emit('connected', {sID:`${socket.id}`, message: 'new connection'} );
+// io.on('connection', function(socket){
+//     console.log('a user has connected', socket);
+//     socket.emit('connected', {sID:`${socket.id}`, message: 'new connection'} );
     // userCount++;
 
 
