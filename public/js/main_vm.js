@@ -4,23 +4,13 @@ import UserNickname from './modules/UserNickname.js'
 
 const socket = io();
 
-// socket.set('nickname', 'Guest');
+socket.set('nickname', 'Guest');
 
-// for (var socketId in io.sockets.sockets) {
-//     io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
-//         console.log(nickname);
-//     });
-// }
-
-var clients = [];
-
-io.socket.on('connect', function(client) {
-    clients.push(client); 
-
-    client.on('disconnect', function() {
-        clients.splice(clients.indexOf(client), 1);
+for (var socketId in io.sockets.sockets) {
+    io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
+        console.log(nickname);
     });
-});
+}
 
 
 function setUserId({sID, message}) {
