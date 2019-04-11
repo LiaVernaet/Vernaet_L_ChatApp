@@ -6,7 +6,7 @@ var http = require('http').Server(app);
 var fs = require('fs');
 var clients = io.sockets.clients();
 var socket = io.connect();
-var uploader = new SocketIOFileUpload(socket);
+// var uploader = new SocketIOFileUpload(socket);
 
 uploader.listenOnInput(document.getElementById("fileUploader"));
 
