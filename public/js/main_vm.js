@@ -14,7 +14,7 @@ const socket = io();
 
 var clients = [];
 
-io.sockets.on('connect', function(client) {
+io.socket.on('connect', function(client) {
     clients.push(client); 
 
     client.on('disconnect', function() {
