@@ -6,11 +6,11 @@ const socket = io();
 
 // socket.set('nickname', 'Guest');
 
-for (var socketId in io.sockets.sockets) {
-    io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
-        console.log(nickname);
-    });
-}
+// for (var socketId in io.sockets.sockets) {
+//     io.sockets.sockets[socketId].get('nickname', function(err, nickname) {
+//         console.log(nickname);
+//     });
+// }
 
 
 function setUserId({sID, message}) {
