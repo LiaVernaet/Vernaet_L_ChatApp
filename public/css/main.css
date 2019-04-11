@@ -91,9 +91,15 @@ form input[type=submit]:hover {
 
     @keyframes buttonAnimate {
         from {
-          transform: scale(1); }
+          transform: scale(1); 
+          background-color: #c35bff;
+        
+        }
         to {
-          transform: scale(1.1); } }
+          transform: scale(1.1); 
+          background-color: #dca0ff;
+        
+        } }
 
 #messages{
     list-style-type:none;
