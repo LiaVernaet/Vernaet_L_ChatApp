@@ -85,6 +85,16 @@ form input[type=submit]{
     font-weight:bold
 }
 
+form input[type=submit]:hover {
+    animation-name: buttonAnimate;
+    animation-duration: .6s; }
+
+    @keyframes buttonAnimate {
+        from {
+          transform: scale(1); }
+        to {
+          transform: scale(1.1); } }
+
 #messages{
     list-style-type:none;
     /* margin:0; */
