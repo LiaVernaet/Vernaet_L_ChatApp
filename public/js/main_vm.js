@@ -19,9 +19,9 @@ function setUserId({sID, message}) {
     console.log('connected', sID, message);
     vm.socketID = sID;
     // userCount = userCount + 1;
-    Number(userCount);
+    Number(userCount++);
     // userCount = userCount++;
-    userCount++;
+    // userCount++;
     console.log(userCount);
     document.getElementById('userCountH2').innerHTML = userCount;
 
