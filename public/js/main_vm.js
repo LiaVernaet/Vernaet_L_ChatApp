@@ -1,8 +1,9 @@
 import ChatMessage from './modules/ChatMessage.js'
 import UserNickname from './modules/UserNickname.js'
 
-var userCount = 0;
 const socket = io();
+
+const userCount = 0;
 
 //removing bottom lines crashes program
 // socket.set('nickname', 'Guest');
