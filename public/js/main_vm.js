@@ -25,7 +25,7 @@ function appendMessage(message) {
 }
 
 function appendUser(nickname) {
-    var userCount = userCount;
+    var userCount = 0;
     vm.users.push(nickname);
     userCount++;
     console.log(userCount);
