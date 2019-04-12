@@ -12,12 +12,13 @@ const socket = io();
 //     });
 // }
 //
-
+var userCount = 0;
 function setUserId({sID, message}) {
     // debugger;
     console.log('connected', sID, message);
     vm.socketID = sID;
-    var userCount = 0;
+
+    
     userCount++;
     console.log(userCount);
 
