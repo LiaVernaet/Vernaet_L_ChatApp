@@ -3,8 +3,6 @@ import UserNickname from './modules/UserNickname.js'
 
 const socket = io();
 
-const userCount = 0;
-
 //removing bottom lines crashes program
 // socket.set('nickname', 'Guest');
 
@@ -27,6 +25,7 @@ function appendMessage(message) {
 }
 
 function appendUser(nickname) {
+    var userCount = userCount;
     vm.users.push(nickname);
     userCount++;
     console.log(userCount);
