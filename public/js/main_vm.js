@@ -12,7 +12,7 @@ const socket = io();
 //     });
 // }
 //
-var userCount = 0;
+var userCount;
 
 function setUserId({sID, message}) {
     // debugger;
