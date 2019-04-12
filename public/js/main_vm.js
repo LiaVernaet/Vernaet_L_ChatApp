@@ -17,6 +17,9 @@ function setUserId({sID, message}) {
     // debugger;
     console.log('connected', sID, message);
     vm.socketID = sID;
+    var userCount = 0;
+    userCount++;
+    console.log(userCount);
 
 }
 
@@ -26,9 +29,6 @@ function appendMessage(message) {
 
 function appendUser(nickname) {
     vm.users.push(nickname);
-    var userCount = 0;
-    userCount++;
-    console.log(userCount);
 }
 
 // function appendImage(image) {
