@@ -15,7 +15,7 @@ const socket = io();
 var userCount = 0;
 
 document.getElementById('userCountH2').innerHTML = userCount;
-document.getElementById('userList').innerHTML = socketId;
+// document.getElementById('userList').innerHTML = socketId;
 
 function setUserId({sID, message}) {
     // debugger;
