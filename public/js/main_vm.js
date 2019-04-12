@@ -23,6 +23,8 @@ function setUserId({sID, message}) {
 
 function appendMessage(message) {
     vm.messages.push(message);
+    var userCount = 0;
+console.log(userCount);
 }
 
 function appendUser(nickname) {
