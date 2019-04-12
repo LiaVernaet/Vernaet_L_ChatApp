@@ -1,7 +1,7 @@
 import ChatMessage from './modules/ChatMessage.js'
 import UserNickname from './modules/UserNickname.js'
 
-
+var userCount = 0;
 const socket = io();
 
 //removing bottom lines crashes program
@@ -23,13 +23,12 @@ function setUserId({sID, message}) {
 
 function appendMessage(message) {
     vm.messages.push(message);
-    var userCount = 0;
-console.log(userCount);
 }
 
 function appendUser(nickname) {
     vm.users.push(nickname);
-    console.log(users);
+    userCount++;
+    console.log(userCount);
 }
 
 // function appendImage(image) {
