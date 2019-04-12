@@ -14,20 +14,19 @@ const socket = io();
 //
 var userCount = 0;
 
-document.getElementById('userCountH2').innerHTML = userCount;
-
 function setUserId({sID, message}) {
     // debugger;
     console.log('connected', sID, message);
     vm.socketID = sID;
+    userCount++;
+    console.log(userCount);
+    document.getElementById('userCountH2').innerHTML = userCount;
 
 
 }
 
 function appendMessage(message) {
     vm.messages.push(message);
-    userCount++;
-    console.log(userCount);
 }
 
 function appendUser(nickname) {
