@@ -12,7 +12,7 @@ const socket = io();
 //     });
 // }
 //
-var userCount = 3;
+var userCount = 0;
 
 document.getElementById('userCountH2').innerHTML = userCount;
 
@@ -21,13 +21,13 @@ function setUserId({sID, message}) {
     console.log('connected', sID, message);
     vm.socketID = sID;
 
-    userCount = userCount++;
-    console.log(userCount);
 
 }
 
 function appendMessage(message) {
     vm.messages.push(message);
+    userCount++;
+    console.log(userCount);
 }
 
 function appendUser(nickname) {
