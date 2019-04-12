@@ -22,13 +22,14 @@ function setUserId({sID, message}) {
 
 function appendMessage(message) {
     vm.messages.push(message);
+    var userCount = 0;
+    userCount++;
+    console.log(userCount);
 }
 
 function appendUser(nickname) {
     var userCount = 0;
     vm.users.push(nickname);
-    userCount++;
-    console.log(userCount);
 }
 
 // function appendImage(image) {
