@@ -11,8 +11,8 @@ var fs = require('fs');
 
 // uploader.listenOnInput(document.getElementById("fileUploader"));
 
-// var userCount = 0;
-// console.log(userCount);
+var userCount = 0;
+console.log(userCount);
 
 // app.use(express.static(__dirname, '/'));
 
