@@ -12,7 +12,7 @@ const socket = io();
 //     });
 // }
 //
-var userCount = 0;
+var userCount = 3;
 
 document.getElementById('userCountH2').innerHTML = userCount;
 
